@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  nginx_noti:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /etc/ssl:/etc/nginx/ssl:ro
+    restart: always
